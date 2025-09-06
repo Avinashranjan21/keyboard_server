@@ -47,3 +47,6 @@ Finally, start the FastAPI server:
 ```bash
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
+
+### 4. Code flow sequence diagram
+![alt text](image.png)
