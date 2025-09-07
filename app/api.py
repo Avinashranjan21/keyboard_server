@@ -1,6 +1,9 @@
 from fastapi import APIRouter
 from .models import CommandRequest, CommandResponse
 from .handlers import COMMANDS
+from fastapi import APIRouter
+from app.config import MCP_PROVIDER, MCP_MODEL
+from .handlers import COMMANDS, handle_ai_command
 
 router = APIRouter()
 
@@ -21,3 +24,7 @@ async def root():
 @router.get("/mcp/health")
 async def mcp_health():
     return {"status": "ok", "message": "MCP server running"}
+
+@router.get("/config")
+def get_config():
+    return {"provider": MCP_PROVIDER, "model": MCP_MODEL}
