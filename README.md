@@ -48,5 +48,27 @@ Finally, start the FastAPI server:
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
+---
+
+## API Keys and Configuration
+
+This project uses a `.env` file to manage API keys and other configuration variables.
+
+1.  **Create a `.env` file** in the root of the project.
+2.  **Add your API keys** and other settings to the file.
+
+Here is an example of the `.env` file structure:
+
+```
+OPENAI_API_KEY=xxxx
+GEMINI_API_KEY=xxxx
+MCP_PROVIDER=openai
+MCP_MODEL=gpt-4o-mini
+```
+
+**Note:**
+*   `MCP_PROVIDER` can be `openai` or `gemini`.
+*   `MCP_MODEL` should be a valid model for the selected provider.
+
 ### 4. Code flow sequence diagram
 ![alt text](image.png)
